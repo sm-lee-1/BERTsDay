@@ -25,7 +25,7 @@ def process_file(file_path, output_dir, tokenizer):
     if not os.path.isdir(output_dir):
         os.mkdir(output_dir)
 
-    data = open(file_path).read().splitlines()
+    data = open(file_path,encoding='euc-kr').read().splitlines()
 
     # line별로 process를 해준 뒤,
     processed_data = [process_line(line, tokenizer) for line in data]
